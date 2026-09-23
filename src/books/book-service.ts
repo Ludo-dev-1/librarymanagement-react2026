@@ -30,7 +30,7 @@ export class BookService {
   }
 
   addBook(book: Book): boolean {
-    if (book) {
+    if (book.title && book.author && book.availableCopies && book.totalCopies > 0) {
       this.books.push(book);
       return true;
     }
